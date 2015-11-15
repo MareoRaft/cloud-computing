@@ -1,0 +1,18 @@
+@mixin keyframes($toposition){
+    @-moz-keyframes animatedBackground { to { background-position: $toposition; } }
+    @-webkit-keyframes animatedBackground { to { background-position: $toposition; } }
+}
+
+@mixin animation($value){
+    animation: $value;
+    -ms-animation: $value;
+    -moz-animation: $value;
+    -webkit-animation: $value;
+}
+
+@mixin animation-play-state($value){
+    animation-play-state: $value;
+    -ms-animation-play-state: $value;
+    -moz-animation-play-state: $value;
+    -webkit-animation-play-state: $value;
+}

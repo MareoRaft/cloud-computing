@@ -1,0 +1,130 @@
+@import 'reset';
+@import 'animation';
+@import 'codemirror';
+@import 'solarized';
+@import 'bubblegum';
+
+///////////////////////////////////// VARIABLES /////////////////////////////////////
+$bottomborderwidth: 50px;
+
+$black: #633d11; $darkgrey: #333; $grey: #555; $lightgrey: #777; $transgrey: rgba( 80, 80, 80, 0.5 );
+$white: #eee; $darkwhite: #999;
+
+$gold: #e6d460; $blue: #0af;
+$rose: #f02b4c; $pink: #f12772; $red: $rose;
+$brightgreen: #a6de2a; $lightgreen: #0d0; $mediumgreen: #0a0; $green: $mediumgreen;
+
+@mixin font {
+  color: $black;
+  font-family: Monaco, "Lucida Console", Courier, "Courier New", monospace;
+  font-size: 0.9rem; //0.9rem == 14px
+  line-height: 1.2rem; //1.2 rem ~~ 19px
+}
+
+//////////////////////////////////////// CSS ////////////////////////////////////////
+body, html { //these are needed for the percentages to work properly and the scrolling
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+body {
+  @include font;
+  border-bottom: $bottomborderwidth solid $grey;
+}
+
+a{ text-decoration: none; }
+a:link{ color: $blue; }
+a:hover{ color: $blue; }
+a:active{ color: $pink; }
+a:visited{ color: $blue; }
+
+
+%section_box{
+  padding: 14px 14px 0px 14px;
+  width: 100%;
+  background-color: transparent;
+}
+
+%section_content{
+  border: none; //2px solid $grey
+  padding: 0;
+  width: 100%; height: 100%;
+  overflow: scroll;
+  background-color: transparent;
+  @include font;
+}
+
+%validation{
+  padding: 8px;
+  margin: 6px;
+  white-space: nowrap; overflow-x: scroll; overflow-y: hidden; // horizontal scroller
+  color: white; font-family: Verdana, Geneva, sans-serif;
+  // box-shadow: 3px 3px 2px rgba( 30, 30, 30, 0.5 );
+}
+
+/*header {
+  @extend %section_box;
+  height: 10%;
+  @include font; font-size: 2.8rem; text-align: center;
+}*/
+
+#feedback {
+  @extend %section_box;
+  height: 25%;
+  #content{
+    @extend %section_content;
+    .correct{
+      @extend %validation;
+      background-color: $green;
+    }
+    .incorrect{
+      @extend %validation;
+      background-color: $red;
+    }
+  }
+}
+
+#editor {
+  @extend %section_box;
+  height: 75%;
+  textarea {
+    @extend %section_content;
+    outline: 0;
+  }
+  .CodeMirror {
+    @extend %section_content;
+    outline: 0;
+  }
+}
+
+footer {
+  @extend %section_box; padding-top: 0;
+  height: 0;
+  @include font; line-height: 3.4rem; color: $darkwhite;
+  div {
+    height: $bottomborderwidth;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden; // this is the only way to prevent vertical scrolling
+  }
+  #left{
+    float: left;
+    width: 85%;
+    .option{ cursor: default; }
+    #animationbool{ color: white; }
+    #soundbool{ color: white; }
+  }
+  #right{
+    float: right;
+    width: 15%;
+    #check{
+      display: inline-block;
+      margin-top: 8px;
+      height: 35px; width: 100%;
+      background-color: $lightgreen;
+      border-radius: 5px;
+      line-height: 37px; text-align: center; color: white;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+/* This code and the cloud image was created with the help of http://davidwalsh.name/background-animation-css and is protected under the MIT license http://opensource.org/licenses/MIT */
+
+@import 'mixins';
+
+@include keyframes( 0px bottom ); // putting -560px here may have caused a jump.
+
+#animation {
+    width: 100%; // element may already have a width of 100% anyway
+    //background-color is now in each of the theme files as class .solarized .solarized-dark .bubblegum etc
+    //background-image is also in the theme files
+    background-position: 560px bottom;
+    background-repeat: repeat-x; //no-repeat
+    @include animation( animatedBackground 47s linear infinite );
+    @include animation-play-state( paused ); // when .animating is removed, this pauses the animation
+}
+
+.animating {
+	@include animation-play-state( running !important ); // important to override #animation
+}

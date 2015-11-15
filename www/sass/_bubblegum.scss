@@ -1,0 +1,42 @@
+/*****************************************************************/
+/*   The bubblegum theme is made by Matthew Lancellotti          */
+/*   and was based on mbonaci's Brackets mbo theme               */
+/*   https://github.com/mbonaci/global/blob/master/Mbo.tmTheme   */
+/*****************************************************************/
+
+$pink: #f12772;
+$value: #0060b0; //00a8c6
+
+.bubblegum{
+	background-color: #8ec1da;
+	background-image: url(clouds.alpha.png);
+}
+
+.cm-s-bubblegum.CodeMirror { background: #2c2c2c; color: #ffffec; }
+.cm-s-bubblegum div.CodeMirror-selected { background: #716C62 !important; }
+.cm-s-bubblegum .CodeMirror-guttermarker { color: white; }
+.cm-s-bubblegum .CodeMirror-guttermarker-subtle { color: grey; }
+.cm-s-bubblegum .CodeMirror-linenumber { color: #644; } //dadada
+.cm-s-bubblegum .CodeMirror-cursor { border-left: 1px solid #ffffec !important; }
+
+.cm-s-bubblegum span.cm-comment { color: #825b40; } //95958a //827b60
+.cm-s-bubblegum span.cm-atom { color: $value; }
+.cm-s-bubblegum span.cm-number { color: $value; }
+
+.cm-s-bubblegum span.cm-property, .cm-s-bubblegum span.cm-attribute { color: #adefff; } //9ddfe9 //adeff9
+.cm-s-bubblegum span.cm-keyword { color: $pink; } //ffb928
+.cm-s-bubblegum span.cm-string { color: #ffff6c; } //#ffcf6c
+.cm-s-bubblegum span.cm-string.cm-property { color: #ffffec; }
+
+.cm-s-bubblegum span.cm-variable { color: #ffffec; }
+.cm-s-bubblegum span.cm-variable-2 { color: $value; }
+.cm-s-bubblegum span.cm-def { color: #ffffec; }
+.cm-s-bubblegum span.cm-bracket { color: #fffffc; font-weight: bold; }
+.cm-s-bubblegum span.cm-tag { color: #9ddfe9; }
+.cm-s-bubblegum span.cm-link { color: #f54b07; }
+.cm-s-bubblegum span.cm-error { border-bottom: #636363; color: #ffffec; }
+.cm-s-bubblegum span.cm-qualifier { color: #ffffec; }
+
+.cm-s-bubblegum .CodeMirror-activeline-background { background: #494b41 !important; }
+.cm-s-bubblegum .CodeMirror-matchingbracket { color: chocolate !important; } //222
+.cm-s-bubblegum .CodeMirror-matchingtag { background: rgba(255, 255, 255, .37); }

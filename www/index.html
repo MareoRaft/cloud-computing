@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cloud Computing</title>
+	<meta charset='UTF-8'>
+	<link rel='stylesheet' href='stylesheets/main.css' />
+<!--
+	<script src='http://code.jquery.com/jquery-1.11.2.min.js'></script>
+	<script src='http://code.jquery.com/jquery-migrate-1.2.1.min.js'></script>
+	<script src='scripts/codemirror/main.js'></script>
+	<script src='scripts/codemirror/mode/javascript.js'></script>
+	<script src='scripts/codemirror/addon/edit/matchbrackets.js'></script>
+	<script src='scripts/codemirror/addon/comment/comment.js'></script>
+	<script src='scripts/detectbrowser.js'></script>
+	<script src='https://cdn.rawgit.com/jquery/esprima/1.2/esprima.js'></script>
+	<script src='scripts/feedback.js'></script>
+	<script src='scripts/main.js'></script>
+-->
+	<script data-main='scripts/main' src='scripts/require.js'></script>
+</head>
+<body id='animation' class='solarized-dark'>
+	<!--<header>cloud computing</header>-->
+	<section id='feedback'>
+		<div id='content'>
+			<!-- this is where all the feedback will go.  it is populated by javascript.-->
+		</div>
+	</section>
+	<section id='editor'>
+		<textarea id='code'>var java = 'Type your javascript here!'&#10;console.log('this is great!');&#10;&#10;function myFunction() {&#10;    var x, text;&#10;&#10;    // Get the value of the input field with id="numb"&#10;    x = document.getElementById("numb").value;&#10;&#10;  	while (x > 10) {&#10;      x--;&#10;    }&#10;  &#10;    // If x is Not a Number or less than one or greater than 10&#10;    if (isNaN(x) || x < 1 || x > 10) {&#10;        text = "Input not valid";&#10;    } else {&#10;        text = "Input OK";&#10;    }&#10;    document.getElementById("demo").innerHTML = text;&#10;}&#10;&#10;
+
+		</textarea>
+	</section>
+	<footer>
+		<div id='left'>
+			<span class='option'>                Feedback: <span id='always'>Always</span> <span id='button'>Button</span>
+			<span class='option'> <pre>   </pre>Animation: <span id='animationon'>On</span> <span id='animationoff'>Off</span>
+			<span class='option'> <pre>   </pre>Sound: <span id='soundon'>On</span> <span id='soundoff'>Off</span>
+				<audio loop>
+					<source src='SadSouls-DancingTwoHundredTimes.mp3' type='audio/mpeg'>
+					Your browser does not support HTML5 audio.
+				</audio>
+			<span class='option'> <pre>   </pre>Theme: <span id='day'>Day</span> <span id='evening'>Evening</span> <span id='night'>Night</span>
+			<span class='option'> <pre>   </pre><a href='http://codemirror.net/doc/manual.html#commands'>Commands</a></span>
+		</div>
+		<div id='right'>
+			<div id='check'>Check!</div>
+		</div>
+	</footer>
+</body>
+</html>
