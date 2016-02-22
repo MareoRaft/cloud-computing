@@ -10,8 +10,8 @@ class BaseHandler (RequestHandler):
 		#init stuff!
 		print( var )
 		pass
-	def get(self, num):
-		self.write("this is "+num+"!")
+	def get(self):
+		self.write("You have reached the BaseHandler!! If you want the real website, add /index.html to your url path!")
 
 class FormHandler (BaseHandler):
 	def get(self):

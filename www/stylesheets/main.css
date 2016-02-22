@@ -2,7 +2,7 @@
  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
  * http://cssreset.com
  */
-/* line 17, ../sass/_reset.scss */
+/* line 5, ../sass/_reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,43 +23,62 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
   box-sizing: border-box;
+  -ms-overflow-style: none;
+  overflow: hidden;
+  overflow-x: hidden;
+}
+/* line 29, ../sass/_reset.scss */
+html:-webkit-scrollbar, body:-webkit-scrollbar, div:-webkit-scrollbar, span:-webkit-scrollbar, applet:-webkit-scrollbar, object:-webkit-scrollbar, iframe:-webkit-scrollbar,
+h1:-webkit-scrollbar, h2:-webkit-scrollbar, h3:-webkit-scrollbar, h4:-webkit-scrollbar, h5:-webkit-scrollbar, h6:-webkit-scrollbar, p:-webkit-scrollbar, blockquote:-webkit-scrollbar, pre:-webkit-scrollbar,
+a:-webkit-scrollbar, abbr:-webkit-scrollbar, acronym:-webkit-scrollbar, address:-webkit-scrollbar, big:-webkit-scrollbar, cite:-webkit-scrollbar, code:-webkit-scrollbar,
+del:-webkit-scrollbar, dfn:-webkit-scrollbar, em:-webkit-scrollbar, img:-webkit-scrollbar, ins:-webkit-scrollbar, kbd:-webkit-scrollbar, q:-webkit-scrollbar, s:-webkit-scrollbar, samp:-webkit-scrollbar,
+small:-webkit-scrollbar, strike:-webkit-scrollbar, strong:-webkit-scrollbar, sub:-webkit-scrollbar, sup:-webkit-scrollbar, tt:-webkit-scrollbar, var:-webkit-scrollbar,
+b:-webkit-scrollbar, u:-webkit-scrollbar, i:-webkit-scrollbar, center:-webkit-scrollbar,
+dl:-webkit-scrollbar, dt:-webkit-scrollbar, dd:-webkit-scrollbar, ol:-webkit-scrollbar, ul:-webkit-scrollbar, li:-webkit-scrollbar,
+fieldset:-webkit-scrollbar, form:-webkit-scrollbar, label:-webkit-scrollbar, legend:-webkit-scrollbar,
+table:-webkit-scrollbar, caption:-webkit-scrollbar, tbody:-webkit-scrollbar, tfoot:-webkit-scrollbar, thead:-webkit-scrollbar, tr:-webkit-scrollbar, th:-webkit-scrollbar, td:-webkit-scrollbar,
+article:-webkit-scrollbar, aside:-webkit-scrollbar, canvas:-webkit-scrollbar, details:-webkit-scrollbar, embed:-webkit-scrollbar,
+figure:-webkit-scrollbar, figcaption:-webkit-scrollbar, footer:-webkit-scrollbar, header:-webkit-scrollbar, hgroup:-webkit-scrollbar,
+menu:-webkit-scrollbar, nav:-webkit-scrollbar, output:-webkit-scrollbar, ruby:-webkit-scrollbar, section:-webkit-scrollbar, summary:-webkit-scrollbar,
+time:-webkit-scrollbar, mark:-webkit-scrollbar, audio:-webkit-scrollbar, video:-webkit-scrollbar {
+  display: none;
 }
 
-/* line 27, ../sass/_reset.scss */
+/* line 32, ../sass/_reset.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
   box-sizing: border-box;
 }
 
-/* line 31, ../sass/_reset.scss */
+/* line 37, ../sass/_reset.scss */
 input, textarea {
   box-sizing: border-box;
 }
 
-/* line 34, ../sass/_reset.scss */
+/* line 40, ../sass/_reset.scss */
 pre {
   display: inline;
 }
 
-/* line 37, ../sass/_reset.scss */
+/* line 43, ../sass/_reset.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 40, ../sass/_reset.scss */
+/* line 46, ../sass/_reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 44, ../sass/_reset.scss */
+/* line 49, ../sass/_reset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 48, ../sass/_reset.scss */
+/* line 54, ../sass/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -67,19 +86,15 @@ table {
 
 /* This code and the cloud image was created with the help of http://davidwalsh.name/background-animation-css and is protected under the MIT license http://opensource.org/licenses/MIT */
 @-moz-keyframes animatedBackground {
-  /* line 2, ../sass/_mixins.scss */
   to {
     background-position: 0px bottom;
   }
 }
-
 @-webkit-keyframes animatedBackground {
-  /* line 3, ../sass/_mixins.scss */
   to {
     background-position: 0px bottom;
   }
 }
-
 /* line 7, ../sass/_animation.scss */
 #animation {
   width: 100%;
@@ -193,56 +208,38 @@ table {
 }
 
 @-moz-keyframes blink {
-  /* line 74, ../sass/_codemirror.scss */
   0% {
     background: #7e7;
   }
-
-  /* line 75, ../sass/_codemirror.scss */
   50% {
     background: none;
   }
-
-  /* line 76, ../sass/_codemirror.scss */
   100% {
     background: #7e7;
   }
 }
-
 @-webkit-keyframes blink {
-  /* line 79, ../sass/_codemirror.scss */
   0% {
     background: #7e7;
   }
-
-  /* line 80, ../sass/_codemirror.scss */
   50% {
     background: none;
   }
-
-  /* line 81, ../sass/_codemirror.scss */
   100% {
     background: #7e7;
   }
 }
-
 @keyframes blink {
-  /* line 84, ../sass/_codemirror.scss */
   0% {
     background: #7e7;
   }
-
-  /* line 85, ../sass/_codemirror.scss */
   50% {
     background: none;
   }
-
-  /* line 86, ../sass/_codemirror.scss */
   100% {
     background: #7e7;
   }
 }
-
 /* Can style cursor different in overwrite (non-insert) mode */
 /* line 92, ../sass/_codemirror.scss */
 .cm-tab {
@@ -912,7 +909,7 @@ http://ethanschoonover.com/solarized/img/solarized-palette.png
   color: #eee;
 }
 
-/* line 92, ../sass/_solarized.scss */
+/* line 91, ../sass/_solarized.scss */
 .cm-s-solarized .cm-error,
 .cm-s-solarized .cm-invalidchar {
   color: #586e75;
@@ -1142,7 +1139,7 @@ body {
   font-family: Monaco, "Lucida Console", Courier, "Courier New", monospace;
   font-size: 0.9rem;
   line-height: 1.2rem;
-  border-bottom: 50px solid #555555;
+  border-bottom: 50px solid #555;
 }
 
 /* line 35, ../sass/main.scss */
@@ -1152,12 +1149,12 @@ a {
 
 /* line 36, ../sass/main.scss */
 a:link {
-  color: #00aaff;
+  color: #0af;
 }
 
 /* line 37, ../sass/main.scss */
 a:hover {
-  color: #00aaff;
+  color: #0af;
 }
 
 /* line 38, ../sass/main.scss */
@@ -1167,7 +1164,7 @@ a:active {
 
 /* line 39, ../sass/main.scss */
 a:visited {
-  color: #00aaff;
+  color: #0af;
 }
 
 /* line 42, ../sass/main.scss */
@@ -1213,7 +1210,7 @@ a:visited {
 }
 /* line 76, ../sass/main.scss */
 #feedback #content .correct {
-  background-color: #00aa00;
+  background-color: #0a0;
 }
 /* line 80, ../sass/main.scss */
 #feedback #content .incorrect {
@@ -1242,7 +1239,7 @@ footer {
   font-size: 0.9rem;
   line-height: 1.2rem;
   line-height: 3.4rem;
-  color: #999999;
+  color: #999;
 }
 /* line 104, ../sass/main.scss */
 footer div {
@@ -1279,7 +1276,7 @@ footer #right #check {
   margin-top: 8px;
   height: 35px;
   width: 100%;
-  background-color: #00dd00;
+  background-color: #0d0;
   border-radius: 5px;
   line-height: 37px;
   text-align: center;
